@@ -1,0 +1,241 @@
+/* ─────────────────────────────────────────
+   contact.css
+───────────────────────────────────────── */
+
+.contact {
+  background: var(--bg);
+  border-top: 1px solid var(--border2);
+}
+
+.contact__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+  align-items: start;
+}
+
+/* ── Left panel ── */
+.contact__heading {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+  letter-spacing: -.3px;
+}
+
+.contact__heading-gradient {
+  background: linear-gradient(135deg, var(--cyan), var(--mongo));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contact__body {
+  color: var(--text2);
+  line-height: 1.85;
+  margin-bottom: 2rem;
+  font-size: .93rem;
+}
+
+.contact__info-list {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact__info-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .85rem 1rem;
+  border-radius: 10px;
+  background: var(--card);
+  border: 1px solid var(--border2);
+  transition: all .2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact__info-row:hover {
+  background: var(--card2);
+  border-color: var(--border);
+  transform: translateX(4px);
+}
+
+.contact__info-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.contact__info-details {
+  flex: 1;
+}
+
+.contact__info-label {
+  font-size: .65rem;
+  color: var(--text2);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.contact__info-value {
+  font-size: .83rem;
+  color: var(--text);
+  font-weight: 500;
+  transition: color .2s;
+}
+
+.contact__info-row:hover .contact__info-value {
+  color: var(--cyan);
+}
+
+.contact__info-arrow {
+  color: var(--muted);
+  font-size: .85rem;
+  margin-left: auto;
+  transition: transform .2s;
+}
+
+.contact__info-row:hover .contact__info-arrow {
+  transform: translateX(3px);
+}
+
+/* ── Availability badge ── */
+.contact__availability {
+  background: var(--card);
+  border: 1px solid rgba(0, 237, 100, .2);
+  border-radius: 12px;
+  padding: 1.4rem;
+}
+
+.contact__availability-header {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: .75rem;
+}
+
+.contact__availability-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--mongo);
+  animation: pulse-ring 1.5s infinite;
+  box-shadow: 0 0 8px var(--mongo);
+}
+
+.contact__availability-label {
+  font-size: .65rem;
+  color: var(--mongo);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.contact__availability-text {
+  font-size: .83rem;
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+/* ── Form card ── */
+.contact__form-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.contact__form-label {
+  font-size: .65rem;
+  color: var(--cyan);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.contact__form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.contact__form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+}
+
+/* ── Field ── */
+.contact__input,
+.contact__textarea {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: .7rem .9rem;
+  border-radius: 8px;
+  font-size: .88rem;
+  outline: none;
+  transition: border-color .2s;
+  width: 100%;
+  font-family: inherit;
+}
+
+.contact__input:focus,
+.contact__textarea:focus {
+  border-color: var(--cyan);
+}
+
+.contact__input--error,
+.contact__textarea--error {
+  border-color: #f87171;
+}
+
+.contact__textarea {
+  resize: none;
+}
+
+/* ── Submit button ── */
+.contact__submit {
+  background: var(--cyan);
+  color: #060b18;
+  padding: .9rem 2rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: .5px;
+  cursor: pointer;
+  transition: background .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  width: 100%;
+}
+
+.contact__submit:disabled {
+  cursor: not-allowed;
+}
+
+.contact__submit--sending {
+  background: var(--muted);
+}
+
+.contact__submit--done {
+  background: #22c55e;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .contact__form-row {
+    grid-template-columns: 1fr;
+  }
+}

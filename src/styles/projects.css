@@ -1,0 +1,115 @@
+/* ─────────────────────────────────────────
+   projects.css
+───────────────────────────────────────── */
+
+.projects {
+  background: var(--bg);
+  border-top: 1px solid var(--border2);
+}
+
+.projects__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Projects Grid ── */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* ── Project Card ── */
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  border-top: 3px solid var(--border);
+  padding: 1.5rem;
+  transition: all .3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-card:hover {
+  border-color: var(--border2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .2);
+}
+
+.project-card__header {
+  border-top: 3px solid;
+  padding-top: 1rem;
+  margin-top: -1.5rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.project-card__title {
+  margin: 0 0 .3rem 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.project-card__subtitle {
+  font-size: .85rem;
+  color: var(--text2);
+}
+
+.project-card__desc {
+  font-size: .9rem;
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+/* ── Tags ── */
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.project-card__tag {
+  display: inline-block;
+  padding: .3rem .8rem;
+  border: 1px solid;
+  border-radius: 4px;
+  font-size: .75rem;
+  font-weight: 500;
+  transition: all .2s ease;
+}
+
+.project-card__tag:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-1px);
+}
+
+/* ── Links ── */
+.project-card__links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.project-card__link {
+  display: inline-block;
+  padding: .5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: .8rem;
+  color: var(--text);
+  transition: all .2s ease;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-card__link:hover {
+  background: var(--border);
+  transform: translateY(-2px);
+}
+
