@@ -1,0 +1,17 @@
+/* ═══════════════════════════════════════
+   styles/index.css  —  master stylesheet
+   Imports all per-component CSS files in
+   dependency order.
+═══════════════════════════════════════ */
+
+@import './global.css';
+@import './animations.css';
+@import './utilities.css';
+@import './Navbar.css';
+@import './Hero.css';
+@import './about.css';
+@import './skills.css';
+@import './projects.css';
+@import './services.css';
+@import './contact.css';
+@import './footer.css';

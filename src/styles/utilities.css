@@ -1,0 +1,27 @@
+/* ─────────────────────────────────────────
+   utilities.css  —  helpers & layout aids
+───────────────────────────────────────── */
+
+/* Scroll-reveal helper — toggled by JS */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.section-pad {
+  padding: 96px clamp(1.25rem, 6vw, 5rem);
+}
+
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 212, 255, .025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, .025) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
